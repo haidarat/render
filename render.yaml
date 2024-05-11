@@ -1,0 +1,16 @@
+# Exported from Render on 2024-05-11T08:23:43Z
+services:
+- type: web
+  name: bot 001
+  runtime: python
+  repo: https://github.com/haidarat/bot-online-channel-24-7
+  plan: free
+  envVars:
+  - key: id
+    sync: false
+  - key: token
+    sync: false
+  region: singapore
+  buildCommand: pip install -r requirements.txt
+  startCommand: python main.py
+version: "1"
